@@ -65,9 +65,10 @@ Third part evaluates the resulting model(s) and generates the csv file with scor
 
 #### Note
 
-* Protein sequence length is not more than 1000 amino acid residues.
-* Specify only the absolute path to the folder!
+* Target protein sequence length is not more than 1000 amino acid residues.
+* Only provide absolute paths
 * If you have problems creating a database for mafft you can download [db_for_mafft](https://drive.google.com/file/d/1RCqvqkgmqs1k4NewladXkVTsrSBtGgAp/view?usp=sharing) and unpack it
+* Please take note that make_fragments.pl script initially installs many dependencies. The installation requires ~73+ Gigs of free disk space.
 
 #### Launch
 
@@ -87,7 +88,7 @@ First part generates its output files in provided working directory. The results
 
 ## Contacts
 
-You can find more info about tools using given links. You can find all results of modeling example protein (human E3 ubiquitin-protein ligase TRIM69) with using our tool in Github repository. If you have any questions, please contact haletidy@gmail.com and/or vanypyankov@gmail.com
+If you have any questions, please contact haletidy@gmail.com and/or vanypyankov@gmail.com
 
 Thank you for your attention!
 
