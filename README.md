@@ -73,7 +73,7 @@ Third part evaluates the resulting model(s) and generates the csv file with scor
 
 All program code is presented in the main.py file. Launch it without any flags. Files Search_and_download_homologues, Process_homologues_and_model and Proteins_score contain functions required for main script execution (part 1, 2 and 3 respectively).
 
-__Note!__ All scripts must be in the same folder!
+__Note!__ All scripts must be in one folder!
 
 The script is started with the following command: 
 
