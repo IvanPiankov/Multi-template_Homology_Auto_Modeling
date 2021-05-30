@@ -64,6 +64,8 @@ Third part evaluates the resulting model(s) and generates the csv file with scor
 
 #### Launch
 
+All program code is presented in the main.py file. Launch it without any flags. Files Search_and_download_homologues, Process_homologues_and_model and Proteins_score contain functions required for main script execution (part 1, 2 and 3 respectively).
+
 In the beginning script requests in the command line the required information. During execution script informs user about target coverage by selected templates and waits for reply whether to proceed or not.
 
 First part generates its output files in provided working directory. The results of the second part are contained in the __Modeling__ folder. The results of the third part are contained in the __score__ folder (Ornate output) and  __score_result__ folder (summary of Ornate output) .
