@@ -40,7 +40,7 @@ graph_for_function = True
 if input("Do you want to calculate the mean and SD for the resulting models? [Y/N]:") in ["n", "N"]:
     mean_and_sd_for_function = False
 if input("Do you want to plot with the a quality score for the residuals ? [Y/N]:") in ["n", "N"]:
-    graph_for_function = True
+    graph_for_function = False
 
 if not os.path.exists(directory):
     os.makedirs(directory)
