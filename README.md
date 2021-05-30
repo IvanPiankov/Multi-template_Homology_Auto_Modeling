@@ -45,6 +45,7 @@ Compatibility is guaranteed for followed python packages versions:
 	urllib.request==3.8
 	Bio==1.78
 	matplotlib==3.3.4
+	
 BLAST_DB: db_v5 
 
 Mafft version: v7.453 
@@ -66,13 +67,33 @@ Second part processes the templates: chooses the correct chain from pdb file, se
 
 Third part evaluates the resulting model(s) and generates the csv file with scores mean and sd and picture with score distribution across target length for each model.
 
+#### Note
+
+* Protein sequence length is not more than 1000 amino acid residues.
+* Specify only the absolute path to the folder!
+* If you have problems creating a database for mafft you can download [db_for_mafft](https://drive.google.com/file/d/1RCqvqkgmqs1k4NewladXkVTsrSBtGgAp/view?usp=sharing) and unpack it
+
 #### Launch
 
 All program code is presented in the main.py file. Launch it without any flags. Files Search_and_download_homologues, Process_homologues_and_model and Proteins_score contain functions required for main script execution (part 1, 2 and 3 respectively).
 
+__Note!__ All scripts must be in the same folder!
+
+The script is started with the following command: 
+
+```
+python3 main.py
+```
+
 In the beginning script requests in the command line the required information. During execution script informs user about target coverage by selected templates and waits for reply whether to proceed or not.
 
-First part generates its output files in provided working directory. The results of the second part are contained in the __Modeling__ folder. The results of the third part are contained in the __score__ folder (Ornate output) and  __score_result__ folder (summary of Ornate output) .
+First part generates its output files in provided working directory. The results of the second part are contained in the __Modeling__ folder. The results of the third part are contained in the __score__ folder (Ornate output) and  __summary_result__ folder (summary of Ornate output).
+
+## Contacts
+
+You can find more info about tools using given links. You can find all results of modeling example protein (human E3 ubiquitin-protein ligase TRIM69) with using our tool in Github repository. If you have any questions, please contact haletidy@gmail.com and/or vanypyankov@gmail.com
+
+Thank you for your attention!
 
 ## References
 <a id="1">[1]</a> 
