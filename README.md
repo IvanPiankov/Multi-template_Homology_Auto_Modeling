@@ -7,10 +7,6 @@ __Students__:   Pyankov I., Shemyakina A.
 
 __Supervisor__: Popov P. (Skoltech)
 
-**Table of Contents**
-
-[TOC]
-
 ## Abstract
 
 This work is inspired by the development process of Proteolysis-targeting chimeras (PROTACs) and related molecules that induce targeted protein degradation by the ubiquitin-proteasome system. They represent a new therapeutic modality and are the focus of great interest, however the progress is hindered by the low efficiency of protein crystallography that provides E3 ubiquitin ligases' 3D structures required in the initial steps of PROTAC development. The automated _in silico_ modeling tool could assist in expanding the number of enzymes available for development of targeted protein degradation systems.
