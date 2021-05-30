@@ -45,10 +45,14 @@ Compatibility is guaranteed for followed python packages versions:
 	urllib.request==3.8
 	Bio==1.78
 	matplotlib==3.3.4
-BLAST_DB: db_v5 \n
-Mafft version: v7.453 \n
-Rosetta version: rosetta.source.release-275 r275 2021.07+release.c48be26 \n
-Ornate has no version, but requiers tensorflow==1.14.0 or sooner (thus, python 3.5-3.7) \n
+BLAST_DB: db_v5 
+
+Mafft version: v7.453 
+
+Rosetta version: rosetta.source.release-275 r275 2021.07+release.c48be26 
+
+Ornate has no version, but requiers tensorflow==1.14.0 or sooner (thus, python 3.5-3.7) 
+
 
 ## User Guide
 
