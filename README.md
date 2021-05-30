@@ -22,7 +22,7 @@ Develop script for performing Multi-template Homology Auto Modeling of a target 
 
 ## Results
 
-You can find the example result of script performance (with target protein human E3 ubiquitin-protein ligase TRIM69, EC 2.3.2.27) in the __results__ folder.
+You can find the example result of script performance (with target protein human E3 ubiquitin-protein ligase TRIM69, EC 2.3.2.27) in the __results__ folder (zipped).
 
 ## Methods
 
