@@ -57,7 +57,7 @@ Ornate has no version, but requiers tensorflow==1.14.0 or sooner (thus, python 3
 
 The script consists of three parts.
 
-First part downloads SWISS-MODEL Repository and/or World Wide Protein Data Bank, performs homologues search in the databases and downloads pdb structures of potential templates.
+First part downloads [SWISS-MODEL Repository](https://swissmodel.expasy.org/docs/repository_help) and/or [World Wide Protein Data Bank](http://www.wwpdb.org/), performs homologues search in the databases and downloads pdb structures of potential templates.
 
 Second part processes the templates: chooses the correct chain from pdb file, selects templates above the identity percent threshold, calculates target coverage by remaining templates. Then the script follows the [RosettaCM tutorial](https://www.rosettacommons.org/demos/latest/tutorials/rosetta_cm/rosetta_cm_tutorial) and generates model(s).
 
