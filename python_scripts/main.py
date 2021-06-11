@@ -142,7 +142,7 @@ if coverage_percent < coverage_threshold:
 
 convert_fasta_alingment_to_grishin(directory, 'clean_alignment', number_of_fastas_in_clean_alignment)
 thread_selected_pdbs(directory, id_protein, path_to_Rosetta_dir)
-# make_fragments(directory, id_protein, path_to_Rosetta_dir)
+make_fragments(directory, id_protein, path_to_Rosetta_dir)
 modify_xml_file(directory, id_protein)
 run_modeling(directory, path_to_Rosetta_dir, id_protein, desired_number_of_models)
 
