@@ -1,0 +1,30 @@
+<ROSETTASCRIPTS>
+    <TASKOPERATIONS>
+    </TASKOPERATIONS>
+    <SCOREFXNS>
+        <ScoreFunction name="stage1" weights="score3" symmetric="0">
+            <Reweight scoretype="atom_pair_constraint" weight="0.5" />
+        </ScoreFunction>
+        <ScoreFunction name="stage2" weights="score4_smooth_cart" symmetric="0">
+            <Reweight scoretype="atom_pair_constraint" weight="0.5" />
+        </ScoreFunction>
+        <ScoreFunction name="fullatom" weights="talaris2013_cart" symmetric="0">
+            <Reweight scoretype="atom_pair_constraint" weight="0.5" />
+        </ScoreFunction>
+    </SCOREFXNS>
+    <FILTERS>
+    </FILTERS>
+    <MOVERS>
+        <Hybridize name="hybridize" stage1_scorefxn="stage1" stage2_scorefxn="stage2" fa_scorefxn="fullatom" batch="1" stage1_increase_cycles="1.0" stage2_increase_cycles="1.0" linmin_only="1">
+            <Fragments three_mers="" nine_mers="" />
+	</Hybridize>
+    <FastRelax name="relax" scorefxn="talaris2013" />        
+    </MOVERS>
+    <APPLY_TO_POSE>
+    </APPLY_TO_POSE>
+    <PROTOCOLS>
+        <Add mover="hybridize" />
+        <Add mover="relax" />
+    </PROTOCOLS>
+    <OUTPUT scorefxn="talaris2013" />
+</ROSETTASCRIPTS>

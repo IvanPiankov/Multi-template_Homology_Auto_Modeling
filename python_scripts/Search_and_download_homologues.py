@@ -18,7 +18,6 @@ def requests_from_uniprot(uniprot_id, directory):
     :type directory: str
     :return: fasta file with target protein
     :rtype: fasta.file
-
     '''
     base = 'http://www.uniprot.org'
     kb_endpoint = '/uniprot/'

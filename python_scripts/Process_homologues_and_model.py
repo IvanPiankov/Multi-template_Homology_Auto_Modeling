@@ -181,26 +181,24 @@ def run_clean_pdb(working_dir, path_to_rosetta_script):
     templates = next(os.walk(path_to_templates))[2]
     print(f'\nFound templates: {templates}\n')
     for i in range(len(templates)):
-        if templates[i][0].isdigit():                           # template is from wwPDB db
-            print(f'\nTemplate {templates[i]} is a crystal')
+        if templates[i][0].isdigit():
+            print(f'\nTemplate {templates[i]} is from wwPDB database')
             chain = templates[i][-5]  # chain is the last symbol of crystal file name ([-5] to ignore .pdb)
             print(f'The chosen chain is {chain}')
             subprocess.run(
                 ['python3', path_to_rosetta_script + 'clean_pdb.py', path_to_templates + templates[i], chain])
-            print('\nclean_pdb.py did the deed')
             print('Cleaning pdb file')
             clean_pdb_output_of_clean_pdb(working_dir, templates[i], chain)
             print('Cleaning fasta file')
             clean_fasta_output_of_clean_pdb(working_dir, templates[i], chain)
-        else:                                                    # template is from Swiss-Model db
-            print(f'\nTemplate {templates[i]} is a swiss model\n')
+        else:
+            print(f'\nTemplate {templates[i]} is from Swiss-model database\n')
             chains = get_chains_from_swiss_model(path_to_templates + templates[i])
             print(f'\nThe template contains chains {chains}\n')
             for chain in chains:
                 print(f'\nRun clean_pdb.py on {templates[i]} with chain {chain}\n')
                 subprocess.run(
                     ['python3', path_to_rosetta_script + 'clean_pdb.py', path_to_templates + templates[i], chain])
-                print('\nclean_pdb.py did the deed\n')
                 print('Cleaning pdb file\n')
                 clean_pdb_output_of_clean_pdb(working_dir, templates[i], chain)
                 print('\nCleaning fasta file\n')
@@ -349,7 +347,7 @@ def remove_templates_under_threshold(path, identity_file, threshold):
     :param identity_file: file with identity percents
     :type identity_file: str
     :param threshold: minimum identity percent
-    :type threshold: int
+    :type threshold: float
     """
 
     path_to_pbds = path + 'Modeling/cleaned_template_pdbs/'
@@ -368,7 +366,7 @@ def remove_templates_under_threshold(path, identity_file, threshold):
         os.remove(path_to_fastas + i + '.fasta')
 
 
-def coverage_minimum(path, alignment, number_of_fastas):
+def calculate_coverage(path, alignment, number_of_fastas):
     """
     Calculates coverage percent - percent of target sequence covered by all selected aligned templates together \n
     Returns coverage percent
