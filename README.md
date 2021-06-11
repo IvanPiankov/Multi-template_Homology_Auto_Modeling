@@ -66,14 +66,14 @@ Third part evaluates the resulting model(s) and generates the csv file with scor
 
 #### Note
 
-* Target protein sequence length is not more than 1000 amino acid residues.
-* Only provide absolute paths
-* If you have problems creating a database for mafft you can download [db_for_mafft](https://drive.google.com/file/d/1RCqvqkgmqs1k4NewladXkVTsrSBtGgAp/view?usp=sharing) and unpack it
+* Allowed target protein sequence length is no more than 1000 amino acid residues.
+* Only provide an absolute path for working directory
+* If you have problems creating a database for mafft you can download [db_for_mafft](https://drive.google.com/file/d/1RCqvqkgmqs1k4NewladXkVTsrSBtGgAp/view?usp=sharing). Unpack it and provide path to it, when the script asks you
 * Please take note that make_fragments.pl script initially installs many dependencies. The installation requires ~73+ Gigs of free disk space.
 
 #### Launch
 
-All program code is presented in the main.py file. Launch it without any flags. Files Search_and_download_homologues, Process_homologues_and_model and Proteins_score contain functions required for main script execution (part 1, 2 and 3 respectively).
+All program code is presented in the main.py file. Launch it without any flags. Files Search_and_download_homologues.py, Process_homologues_and_model.py and Proteins_score.py contain functions required for main script execution (part 1, 2 and 3 respectively). File Preparation.py contains functions for interaction with user.
 
 __Note!__ All scripts must be in one folder!
 
@@ -83,7 +83,7 @@ The script is started with the following command:
 python3 main.py
 ```
 
-In the beginning script requests in the command line the required information. During execution script informs user about target coverage by selected templates and waits for reply whether to proceed or not.
+In the beginning script requests in the command line the required information. The execution might be aborted due to the absence of software dependencies (Ornate and Rosetta), the absence of acceptable homologues in databases and insufficient coverage of target protein by homologues.
 
 First part generates target fasta file in provided working directory and downloads templates in __orig_templates__ folder. The results of the second part are contained in the __Modeling__ folder. The results of the third part are contained in the __score__ folder (Ornate output) and  __summary_result__ folder (summary of Ornate output).
 
