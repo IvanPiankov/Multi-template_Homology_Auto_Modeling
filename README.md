@@ -48,8 +48,10 @@ BLAST_DB: db_v5
 Mafft version: v7.453 
 
 Rosetta version: rosetta.source.release-275 r275 2021.07+release.c48be26 
+Installation instructions at https://www.rosettacommons.org/demos/latest/tutorials/install_build/install_build
 
 Ornate has no version, but requiers tensorflow==1.14.0 or sooner (thus, python 3.5-3.7) 
+Installation instructions at https://team.inria.fr/nano-d/software/Ornate/
 
 
 ## User Guide
